@@ -28,3 +28,63 @@ FOR EXAMPLE , if there is a function to add two numbers, and we give the paramet
 In react also, we use this concept, whenever in the React component, the state and props do not change the component and the component does not re-render, it shows the same output. The useMemo hook is used to improve performance in our React application.
 
 
+## How to use css in react
+
+There are three ways to attach styling.
+External CSS -> Using index.css
+
+body{
+  background-color: blueviolet;
+}
+
+button{
+  background-color: brown;
+}
+h2{
+  background-color: aqua;
+}
+
+Index.css is imported at index.js level, therefore it is available pretty much everywhere.
+
+
+
+Modular CSS -> For every module, we will have a css.
+
+import '../App.js';
+function MyArrayComp (props) {
+    console.log(props);
+    return (
+        <h2>2nd week test</h2>
+    )
+}
+export default MyArrayComp;
+
+
+The idea is better code organization.
+For each module, we will have it's relevant css file.
+This keep the code files organized and structured.
+Instead of having 1 very large file, we have more files but smaller in size comparatively.
+
+
+Third Approach: Inline styling.
+
+
+const style = {
+    color: "yellow", 
+    backgroundColor: "blue"
+  };
+  return (
+    <div>
+      <h2>using index.css</h2>
+      <MyComponents caption="click here"/>
+      {/* <MyComponents caption="BUTTON 2"/> */}
+      {/* <MyComponents caption="BUTTON 3"/> */}
+      <br/>
+      <MyArrayComp abcd_arr={arr}/>
+      <p style={style}>using Inline css</p>
+      
+      
+
+In the same like we give the style attribute.
+This attribute is actually an object.
+
