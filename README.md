@@ -9,3 +9,11 @@ The Component name should follow PascalCasing. Otherwise it will not work.
 Inside components we put all the various components that we will be using.
 
 
+## WHAT ARE PROPS IN REACT
+
+Props means sending of data from one component to another component.
+Typically it is Parent to child.
+In the Parent, we send as an attribute. (Because in the parent, we write HTML like syntax and in HTML, the way we send any data to the element is using attributes).
+In the child component. For functional component, we can get the prop directly as the function's parameter.
+The Props only flows from parent to Child Component.
+The prop data can be anything, primitive data type, non primitive data type, even functional references.
